@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AmazingAqua Drinks - Premium Beverages</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Loading Spinner (add this right after opening body tag) -->
+    <div id="preloader" class="preloader">
+        <div class="spinner-container">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <span class="loading-text">Loading...</span>
+        </div>
+    </div>
+    
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-consent-banner">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3">
+                <p class="mb-0">
+                    We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+                    <a href="#" class="cookie-policy-link">Learn more</a>
+                </p>
+                <div class="d-flex gap-2">
+                    <button id="acceptCookies" class="btn btn-primary">Accept</button>
+                    <button id="declineCookies" class="btn btn-outline-light">Decline</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand fs-4 py-2" href="#">
+                <i class="fas fa-glass-water me-2"></i>
+                AmazingAqua Drinks
+            </a>
+            <button class="navbar-toggler py-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link px-3 py-2 fs-6" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2 fs-6" href="#menu">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2 fs-6" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link px-3 py-2 fs-6" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroSlider" data-bs-slide-to="2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="hero-slide d-flex align-items-center" style="background-image: url('images/slide1.jpg');">
+                        <div class="hero-overlay"></div>
+                        <div class="container text-center text-white position-relative py-4 py-md-5">
+                            <h1 class="text-shadow animate__animated animate__fadeInDown fs-2 fs-md-1">
+                                Refresh Your Day
+                            </h1>
+                            <p class="lead text-shadow animate__animated animate__fadeInUp animate__delay-1s">
+                                Premium beverages delivered to your doorstep
+                            </p>
+                            <a href="#menu" class="btn btn-lg btn-order-hero animate__animated animate__fadeInUp animate__delay-2s">
+                                Order Now <i class="fas fa-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('images/slide2.jpg');">
+                        <div class="hero-overlay"></div>
+                        <div class="container text-center text-white position-relative">
+                            <h1 class="display-1 fw-bold text-shadow animate__animated animate__fadeInDown">
+                                Natural & Fresh
+                            </h1>
+                            <p class="lead text-shadow animate__animated animate__fadeInUp animate__delay-1s">
+                                Made with premium natural ingredients
+                            </p>
+                            <a href="#menu" class="btn btn-lg btn-order-hero animate__animated animate__fadeInUp animate__delay-2s">
+                                Explore Menu <i class="fas fa-leaf ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('images/slide3.jpg');">
+                        <div class="hero-overlay"></div>
+                        <div class="container text-center text-white position-relative">
+                            <h1 class="display-1 fw-bold text-shadow animate__animated animate__fadeInDown">
+                                Special Offers
+                            </h1>
+                            <p class="lead text-shadow animate__animated animate__fadeInUp animate__delay-1s">
+                                Get 5% off on your first order
+                            </p>
+                            <a href="#contact" class="btn btn-lg btn-order-hero animate__animated animate__fadeInUp animate__delay-2s">
+                                Contact Us <i class="fas fa-phone ms-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Our Menu</h2>
+                <p class="section-subtitle">Select from our wide range of premium beverages</p>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <label for="searchBar" class="visually-hidden">Search drinks</label>
+                        <input type="text" 
+                               id="searchBar" 
+                               class="form-control form-control-lg" 
+                               placeholder="Search for a drink..."
+                               aria-label="Search for drinks"
+                               role="searchbox">
+                        <span class="input-group-text" aria-hidden="true">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Categories -->
+            <ul class="nav nav-pills mb-4 justify-content-center flex-wrap gap-2" 
+                id="beverageTab" 
+                role="tablist" 
+                aria-label="Drink categories">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" 
+                            data-bs-toggle="pill" 
+                            data-category="all" 
+                            role="tab" 
+                            aria-selected="true"
+                            aria-controls="all-drinks">
+                        All
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-category="sobolo">Sobolo</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-category="brukina">Brukina</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-category="millet">Millet</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="pill" data-category="juices"></button>
+                </li>
+            </ul>
+            
+            <!-- Menu Items Grid -->
+            <div class="row g-4" id="menuItems">
+                <!-- Menu items will be dynamically loaded -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="badge-wrapper">
+                    <span class="badge-custom">Est. 2025</span>
+                </div>
+                <h2 class="section-title">The Art of Refreshment</h2>
+                <p class="section-subtitle">Where passion meets perfection in every sip</p>
+            </div>
+            
+            <div class="about-wrapper">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="image-stack">
+                            <div class="image-stack__item image-stack__item--top">
+                                <img src="images/50 happy customers.png" 
+                                     alt="Crafting drinks" 
+                                     class="img-fluid rounded-lg"
+                                     loading="lazy">
+                            </div>
+                            <div class="image-stack__item image-stack__item--bottom">
+                                <img src="images/50 unique drinks.png" 
+                                     alt="Fresh ingredients" 
+                                     class="img-fluid rounded-lg"
+                                     loading="lazy">
+                            </div>
+                            <div class="floating-achievements">
+                                <div class="achievement-item">
+                                    <span class="h2 mb-0 counter">500+</span>
+                                    <span class="small d-block">Happy Customers</span>
+                                </div>
+                                <div class="achievement-item">
+                                    <span class="h2 mb-0 counter">30+</span>
+                                    <span class="small d-block">Unique Drinks</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="feature-boxes">
+                                <div class="feature-box highlight mb-4">
+                                    <div class="feature-icon-wrapper">
+                                        <i class="fas fa-star feature-icon"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="h4">Signature Craftsmanship</h3>
+                                        <p>Every drink tells a story of passion, precision, and pure refreshment.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-box mb-4">
+                                    <div class="feature-icon-wrapper">
+                                        <i class="fas fa-leaf feature-icon"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="h4">Natural Ingredients</h3>
+                                        <p>Carefully selected premium ingredients for an authentic taste experience.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="feature-box mb-4">
+                                    <div class="feature-icon-wrapper">
+                                        <i class="fas fa-recycle feature-icon"></i>
+                                    </div>
+                                    <div class="feature-content">
+                                        <h3 class="h4">Eco-Friendly</h3>
+                                        <p>Committed to sustainable practices and environmental responsibility.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-wrapper mt-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="badge-custom">Get In Touch</span>
+            <h2 class="section-title mt-3"></h2>
+            <p class="section-subtitle">We'd love to hear from you!</p>
+        </div>
+        
+        <div class="row justify-content-center g-4">
+            <div class="col-lg-5">
+                <div class="contact-info">
+                    <div class="contact-card mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>Circle Street<br>Circle, Accra</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <p>+233543584177<br>Mon-Fri: 8am - 5pm</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Us</h3>
+                            <p>amazingaquadrinks@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-7">
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" required minlength="2">
+                                    <div class="invalid-feedback">Please enter your name (minimum 2 characters)</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                    <div class="invalid-feedback">Please enter a valid email address</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" required minlength="4">
+                                    <div class="invalid-feedback">Please enter a subject (minimum 4 characters)</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required minlength="10"></textarea>
+                                    <div class="invalid-feedback">Please enter your message (minimum 10 characters)</div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-gradient-custom" id="submitBtn">
+                                    Send Message <i class="fas fa-paper-plane ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="successModalLabel">
+                    <i class="fas fa-check-circle text-success me-2"></i>
+                    Message Sent!
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center py-4">
+                <p class="mb-0">Thank you for contacting us. We'll get back to you soon!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+    <div class="container">
+        <div class="row gy-4">
+            <!-- Company Info -->
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-company">
+                    <h3 class="footer-title">
+                        <i class="fas fa-glass-water me-2"></i>
+                        AmazingAqua Drinks
+                    </h3>
+                    <p class="footer-description">Refreshing beverages crafted with passion for every moment of your day.</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-4 col-md-6">
+                <h4 class="footer-title">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Our Menu</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact & Social -->
+            <div class="col-lg-4 col-md-12">
+                <div class="footer-contact">
+                    <h4 class="footer-title">Get in Touch</h4>
+                    <div class="contact-info mb-3">
+                        <p><i class="fas fa-phone me-2"></i>+233543584177</p>
+                        <p><i class="fas fa-envelope me-2"></i>amazingaquadrinks@gmail.com</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Visit our Facebook page" class="social-link">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a href="#" aria-label="Follow us on Twitter" class="social-link">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/amazingaquadrinks/" 
+                           aria-label="Follow us on Instagram" 
+                           class="social-link">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom text-center mt-4 pt-4 border-top border-secondary">
+            <p class="mb-0">&copy; 2025 AmazingAqua Drinks. All rights reserved. Built and Design by Dennis Tetteh Abayateye</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" 
+            class="scroll-top-btn" 
+            aria-label="Scroll to top of page"
+            title="Scroll to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Interactive Elements -->
+    <div class="interactive-elements">
+        <!-- Scroll to Top Button -->
+        <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+       
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
