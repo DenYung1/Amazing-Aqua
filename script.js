@@ -4,7 +4,7 @@ const beverages = [
         id: 1,
         name: "Sobolo",
         description: "Sobolo is a refreshing, natural drink made from hibiscus flowers, ginger, and spices.",
-        price: 10.00,
+        price: 5.00,
         image: "images/Sobolo1.jpg",
         category: "sobolo",
         orderLink:"https://selar.com/7i2273"
